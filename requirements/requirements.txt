@@ -1,0 +1,3 @@
+# .venv python 3.9
+pip install olapy
+pip install requests
