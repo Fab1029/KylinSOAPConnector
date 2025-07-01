@@ -30,3 +30,31 @@
 ```bash
 git clone https://github.com/tuusuario/KylinSOAPConnector.git
 cd KylinSOAPConnector
+
+2. **Crea entorno virtual**
+```bash
+python3.9 -m venv .venv
+# En Windows: .venv\Scripts\activate
+source .venv/bin/activate
+
+3. **Instala las dependencias desde requirements.txt**
+```bash
+pip install -r requirements.txt
+
+4. **Ejecuta el conector**
+```bash
+python app.py
+
+---
+## 🐛 Bug conocido en Spyne
+1. **Ruta del bug**
+```bash
+<entorno_virtual>/.venv/lib/python3.9/site-packages/spyne/server/wsgi.py
+
+2. **Como deberia estar el constructor**
+```bash
+def __init__(self, parent, transport, req_env, content_type):
+    super(WsgiTransportContext, self).__init__(parent, transport, req_env, content_type)
+    self.req_env = req_env  # Necesario para evitar errores de entorno con WSGI
+
+
