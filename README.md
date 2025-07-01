@@ -39,11 +39,11 @@ source .venv/bin/activate
 
 3. **Instala las dependencias desde requirements.txt**
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt```
 
 4. **Ejecuta el conector**
 ```bash
-python app.py
+python app.py```
 
 ---
 ## 🐛 Bug conocido en Spyne
