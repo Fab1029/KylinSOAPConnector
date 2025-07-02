@@ -159,7 +159,6 @@ class KylinMdxEngine(MdxEngine):
             sort = self.parser.hierarchized_tuples()
 
             result = df.groupby(cols, sort=sort).sum()[self.selected_measures]
-            
         else:
             result = (
                 self.star_schema_dataframe[self.selected_measures].sum().to_frame().T

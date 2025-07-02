@@ -1,3 +1,10 @@
 # .venv python 3.9
 pip install olapy
 pip install requests
+
+# from spyne.server.wsgi
+# Cambiar un aspecto del codigo de la liberia
+# def __init__(self, parent, transport, req_env, content_type):
+#    super(WsgiTransportContext, self).__init__(parent, transport, req_env, content_type)
+#    Realizar este cambio bug encontrado
+#    self.req_env = req_env  
